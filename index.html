@@ -56,41 +56,41 @@
         ctx.drawImage(this, 300,200)
     }
     image.onload = drawImg;
-    // class Animal {
-    //     name;
-    //     talk;
-    //     constructor(name, talk) {
-    //         this.name = name;
-    //         this.talk = talk;
-    //     }
-    //     getName(){ //method //getter()
-    //         return this.name;
-    //     }
-    //
-    //     setName(name){
-    //         this.name = name;
-    //     }
-    //     setName(name, talk){
-    //         this.name = name;
-    //         this.talk = talk;
-    //     }
-    //     eat(){
-    //         console.log('Animat biết ăn thịt')
-    //     }
-    //
-    // }
-    // let animal1 = new Animal('Tom1', 'Meo Meo');
-    //     animal1.setName('Kiên','Ế Ế')
-    // //TÍNH KẾ THỪA Cho phép 1 Class Con kế thừa Class cha thông qua từ khóa extend ==> Class con sẽ được thừa hưởng
-    // // tất cả thuộc tính và hành vi của class Cha
-    // class Cat extends Animal{
-    //     constructor(name, talk) {
-    //         super(name, talk);
-    //     }
-    // }
-    // let cat1 = new Cat('Tom2', 'Grao Grao!!')
-    // let dog1 = new Dog('KEKE', 'Gâu Gâu');   //Đây là 1 object thuộc class Dog extend Animal
-    // let dog2 = new Dog('HEHE', 'LÊU LÊU'); //Có thể khởi tạo nhiều object trực thuộc 1 class
+    class Animal {
+        name;
+        talk;
+        constructor(name, talk) {
+            this.name = name;
+            this.talk = talk;
+        }
+        getName(){ //method //getter()
+            return this.name;
+        }
+
+        setName(name){
+            this.name = name;
+        }
+        setName(name, talk){
+            this.name = name;
+            this.talk = talk;
+        }
+        eat(){
+            console.log('Animat biết ăn thịt')
+        }
+
+    }
+    let animal1 = new Animal('Tom1', 'Meo Meo');
+        animal1.setName('Kiên','Ế Ế')
+    //TÍNH KẾ THỪA Cho phép 1 Class Con kế thừa Class cha thông qua từ khóa extend ==> Class con sẽ được thừa hưởng
+    // tất cả thuộc tính và hành vi của class Cha
+    class Cat extends Animal{
+        constructor(name, talk) {
+            super(name, talk);
+        }
+    }
+    let cat1 = new Cat('Tom2', 'Grao Grao!!')
+    let dog1 = new Dog('KEKE', 'Gâu Gâu');   //Đây là 1 object thuộc class Dog extend Animal
+    let dog2 = new Dog('HEHE', 'LÊU LÊU'); //Có thể khởi tạo nhiều object trực thuộc 1 class
 
 
 </script>
