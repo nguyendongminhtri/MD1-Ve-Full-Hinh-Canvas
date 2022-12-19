@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Dog.js"></script>
+    <style>
+        canvas {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800px" height="500px" style="border: solid 1px red;"></canvas>
+<script>
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d');
+    //Vẽ Hình Tròn
+    ctx.beginPath();
+    ctx.strokeStyle = 'blue'
+    ctx.fillStyle = 'red'
+    ctx.arc(400,250, 80, 0, 2*Math.PI, false) //giũ phím Ctr + click chuột
+    ctx.fill()
+    ctx.stroke();
+    ctx.closePath();
+
+    //VẼ HÌNH CHỮ NHẬT RỖNG
+    ctx.beginPath();
+    ctx.rect(100,100, 200,100)
+    ctx.stroke();
+    ctx.closePath();
+    //VẼ HÌNH CHỮ NHẬT ĐẶC
+
+    // ctx.beginPath();
+    // ctx.fillStyle = 'green';
+    // ctx.fillRect(300,200,50,50)
+    // ctx.fill();
+    // ctx.stroke()
+    // ctx.closePath();
+
+
+    //VẼ CHỮ
+    ctx.beginPath();
+    ctx.fillStyle = 'aqua'
+    ctx.font = '100 100px Times New Roman';
+    ctx.fillText('JV11', 100,100, 50)
+    ctx.stroke()
+
+    //VẼ ẢNH
+    let image = new Image();
+    image.src = 'image/ndc.png';
+    function drawImg() {
+        console.log('this --->', this)
+        ctx.drawImage(this, 300,200)
+    }
+    image.onload = drawImg;
+    // class Animal {
+    //     name;
+    //     talk;
+    //     constructor(name, talk) {
+    //         this.name = name;
+    //         this.talk = talk;
+    //     }
+    //     getName(){ //method //getter()
+    //         return this.name;
+    //     }
+    //
+    //     setName(name){
+    //         this.name = name;
+    //     }
+    //     setName(name, talk){
+    //         this.name = name;
+    //         this.talk = talk;
+    //     }
+    //     eat(){
+    //         console.log('Animat biết ăn thịt')
+    //     }
+    //
+    // }
+    // let animal1 = new Animal('Tom1', 'Meo Meo');
+    //     animal1.setName('Kiên','Ế Ế')
+    // //TÍNH KẾ THỪA Cho phép 1 Class Con kế thừa Class cha thông qua từ khóa extend ==> Class con sẽ được thừa hưởng
+    // // tất cả thuộc tính và hành vi của class Cha
+    // class Cat extends Animal{
+    //     constructor(name, talk) {
+    //         super(name, talk);
+    //     }
+    // }
+    // let cat1 = new Cat('Tom2', 'Grao Grao!!')
+    // let dog1 = new Dog('KEKE', 'Gâu Gâu');   //Đây là 1 object thuộc class Dog extend Animal
+    // let dog2 = new Dog('HEHE', 'LÊU LÊU'); //Có thể khởi tạo nhiều object trực thuộc 1 class
+
+
+</script>
+</body>
+</html>
